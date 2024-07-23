@@ -30,7 +30,18 @@ function operate(operator, num1, num2) {
   }
 }
 
-console.log("Add: " + add(num1, num2));
-console.log("Subtract: " + subtract(num1, num2));
-console.log("Multiply: " + multiply(num1, num2));
-console.log("Divide: " + divide(num1, num2));
+function clear() {
+  const clear = document.querySelector("#clear");
+  clear.addEventListener("click", () => {
+    displayText.textContent = "0";
+  });
+}
+
+const displayText = document.querySelector("#display-text");
+
+const number1 = document.querySelector("#number-1");
+number1.addEventListener("click", () => {
+  displayText.textContent = "1";
+});
+
+clear();
