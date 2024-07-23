@@ -7,7 +7,7 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
+  border-radius: 10px;
   margin: auto;
   width: 360px;
   height: 600px;
@@ -17,6 +17,7 @@ body {
   flex: 1;
   background-color: slategray;
   margin: 10px 5px 10px 5px;
+  border-radius: 10px;
 }
 
 #btns-container {
@@ -36,6 +37,7 @@ body {
   border: 0;
   font-size: xx-large;
   font-weight: bold;
+  border-radius: 10px;
 }
 
 .numbers-btns {
