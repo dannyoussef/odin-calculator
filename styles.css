@@ -15,7 +15,7 @@ body {
 
 #display {
   flex: 1;
-  background-color: lightslategray;
+  background-color: slategray;
   margin: 10px 5px 10px 5px;
 }
 
@@ -26,10 +26,29 @@ body {
   background-color: black;
 }
 
+.other-btns,
+.operators-btns,
 .numbers-btns {
   height: 80px;
   width: 80px;
   margin: 5px;
+  background-color: white;
+  border: 0;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.numbers-btns {
+  background-color: lightgray;
+}
+
+.operators-btns {
+  background-color: goldenrod;
+  color: white;
+}
+
+.other-btns {
+  background-color: gray;
 }
 
 #zero-btn {
