@@ -11,7 +11,7 @@ body {
   margin: auto;
   width: 360px;
   height: fit-content;
-  box-shadow: 10px 10px 10px gray;
+  box-shadow: 10px 10px 10px rgb(153, 153, 153);
 }
 
 #display {
@@ -56,13 +56,25 @@ body {
   background-color: lightgray;
 }
 
+.numbers-btns:hover {
+  background-color: darkgray;
+}
+
 .operators-btns {
   background-color: goldenrod;
   color: white;
 }
 
+.operators-btns:hover {
+  background-color: darkgoldenrod;
+}
+
 .other-btns {
   background-color: gray;
+}
+
+.other-btns:hover {
+  background-color: darkgray;
 }
 
 #number-0 {

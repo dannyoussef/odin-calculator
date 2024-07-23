@@ -42,70 +42,72 @@ function clear() {
 function number0() {
   const num = document.querySelector("#number-0");
   num.addEventListener("click", () => {
-    displayText.textContent = "0";
+    displayText.textContent += "0";
+    displayText.textContent.substring(0, 10);
+    console.log("Clicked");
   });
 }
 
 function number1() {
   const num = document.querySelector("#number-1");
   num.addEventListener("click", () => {
-    displayText.textContent = "1";
+    displayText.textContent += "1";
   });
 }
 
 function number2() {
   const num = document.querySelector("#number-2");
   num.addEventListener("click", () => {
-    displayText.textContent = "2";
+    displayText.textContent += "2";
   });
 }
 
 function number3() {
   const num = document.querySelector("#number-3");
   num.addEventListener("click", () => {
-    displayText.textContent = "3";
+    displayText.textContent += "3";
   });
 }
 
 function number4() {
   const num = document.querySelector("#number-4");
   num.addEventListener("click", () => {
-    displayText.textContent = "4";
+    displayText.textContent += "4";
   });
 }
 
 function number5() {
   const num = document.querySelector("#number-5");
   num.addEventListener("click", () => {
-    displayText.textContent = "5";
+    displayText.textContent += "5";
   });
 }
 
 function number6() {
   const num = document.querySelector("#number-6");
   num.addEventListener("click", () => {
-    displayText.textContent = "6";
+    displayText.textContent += "6";
   });
 }
 
 function number7() {
   const num = document.querySelector("#number-7");
   num.addEventListener("click", () => {
-    displayText.textContent = "7";
+    displayText.textContent += "7";
   });
 }
 
 function number8() {
   const num = document.querySelector("#number-8");
   num.addEventListener("click", () => {
-    displayText.textContent = "8";
+    displayText.textContent += "8";
   });
 }
 
 function number9() {
   const num = document.querySelector("#number-9");
   num.addEventListener("click", () => {
-    displayText.textContent = "9";
+    displayText.textContent += "9";
   });
 }
 
