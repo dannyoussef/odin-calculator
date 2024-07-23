@@ -10,15 +10,24 @@ body {
   border-radius: 10px;
   margin: auto;
   width: 360px;
-  height: 600px;
+  height: fit-content;
   box-shadow: 10px 10px 10px gray;
 }
 
 #display {
-  flex: 1;
   background-color: slategray;
   margin: 10px 5px 10px 5px;
   border-radius: 10px;
+  display: flex;
+  justify-content: right;
+}
+
+#display-text {
+  text-align: right;
+  align-self: flex-end;
+  font-size: 65px;
+  color: black;
+  margin: 0;
 }
 
 #btns-container {
