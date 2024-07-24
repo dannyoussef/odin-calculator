@@ -30,6 +30,7 @@ body {
   margin: 0;
   padding-right: 5px;
   height: 75px;
+  font-weight: bold;
 }
 
 #btns-container {
