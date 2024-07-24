@@ -1,6 +1,6 @@
-const num1 = 0;
-const num2 = 0;
-const operator = "";
+let num1 = 0;
+let num2 = 0;
+let operator = "";
 
 function add(num1, num2) {
   return num1 + num2;
@@ -111,7 +111,56 @@ function number9() {
   });
 }
 
+function addBtn() {
+  const add = document.querySelector("#add-sign");
+  add.addEventListener("click", () => {
+    displayText.textContent += "+";
+  });
+}
+
+function addBtn() {
+  const add = document.querySelector("#add-sign");
+  add.addEventListener("click", () => {
+    displayText.textContent += "+";
+  });
+}
+
+function subtractBtn() {
+  const subtract = document.querySelector("#subtract-sign");
+  subtract.addEventListener("click", () => {
+    displayText.textContent += "-";
+  });
+}
+
+function divideBtn() {
+  const divide = document.querySelector("#divide-sign");
+  divide.addEventListener("click", () => {
+    displayText.textContent += "/";
+  });
+}
+
+function multiplyBtn() {
+  const multiply = document.querySelector("#multiply-sign");
+  multiply.addEventListener("click", () => {
+    displayText.textContent += "*";
+  });
+}
+
+function calculate() {
+  const calculate = document.querySelector("#equal-sign");
+  calculate.addEventListener("click", () => {
+    let numArray = displayText.textContent.split("+");
+    num1 = numArray[0];
+    console.log(num1);
+  });
+}
+
+calculate();
 clear();
+addBtn();
+subtractBtn();
+multiplyBtn();
+divideBtn();
 number0();
 number1();
 number2();
