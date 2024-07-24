@@ -45,6 +45,13 @@ function clear() {
   });
 }
 
+function dot() {
+  const dot = document.querySelector("#dot");
+  dot.addEventListener("click", () => {
+    displayText.textContent += ".";
+  });
+}
+
 function number0() {
   const num = document.querySelector("#number-0");
   num.addEventListener("click", () => {
@@ -205,8 +212,11 @@ function calculate() {
     if (numArray[1] == null) {
       return;
     }
-    num1 = parseInt(numArray[0]);
-    num2 = parseInt(numArray[1]);
+
+    num1 = parseFloat(numArray[0]);
+    num2 = parseFloat(numArray[1]);
+    console.log("NUM 1 = ", num1);
+    console.log("NUM 2 = ", num2);
 
     if (displayText.textContent.includes("+")) {
       operator = "+";
@@ -218,10 +228,11 @@ function calculate() {
       operator = "/";
     }
     result = operate(operator, num1, num2);
-    displayText.textContent = result;
+    displayText.textContent = parseFloat(result);
   });
 }
 
+dot();
 del();
 calculate();
 clear();
