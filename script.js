@@ -1,6 +1,7 @@
 let num1 = 0;
 let num2 = 0;
 let operator = "";
+const displayText = document.querySelector("#display-text");
 
 function add(num1, num2) {
   return num1 + num2;
@@ -29,8 +30,6 @@ function operate(operator, num1, num2) {
     return divide(num1, num2);
   }
 }
-
-const displayText = document.querySelector("#display-text");
 
 function clear() {
   const clear = document.querySelector("#clear");
@@ -181,6 +180,13 @@ function multiplyBtn() {
   const multiply = document.querySelector("#multiply-sign");
   multiply.addEventListener("click", () => {
     displayText.textContent += "*";
+  });
+}
+
+function negateBtn() {
+  const negate = document.querySelector("#negate-sign");
+  negate.addEventListener("click", () => {
+    displayText.textContent.padStart;
   });
 }
 

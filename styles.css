@@ -81,3 +81,12 @@ body {
 #number-0 {
   width: 170px;
 }
+
+#clear {
+  width: 170px;
+  background-color: rgb(98, 166, 244);
+}
+
+#clear:hover {
+  background-color: rgb(157, 196, 240);
+}
