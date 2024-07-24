@@ -42,70 +42,110 @@ function clear() {
 function number0() {
   const num = document.querySelector("#number-0");
   num.addEventListener("click", () => {
-    displayText.textContent += "0";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "0";
+    }
   });
 }
 
 function number1() {
   const num = document.querySelector("#number-1");
   num.addEventListener("click", () => {
-    displayText.textContent += "1";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "1";
+    }
   });
 }
 
 function number2() {
   const num = document.querySelector("#number-2");
   num.addEventListener("click", () => {
-    displayText.textContent += "2";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "2";
+    }
   });
 }
 
 function number3() {
   const num = document.querySelector("#number-3");
   num.addEventListener("click", () => {
-    displayText.textContent += "3";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "3";
+    }
   });
 }
 
 function number4() {
   const num = document.querySelector("#number-4");
   num.addEventListener("click", () => {
-    displayText.textContent += "4";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "4";
+    }
   });
 }
 
 function number5() {
   const num = document.querySelector("#number-5");
   num.addEventListener("click", () => {
-    displayText.textContent += "5";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "5";
+    }
   });
 }
 
 function number6() {
   const num = document.querySelector("#number-6");
   num.addEventListener("click", () => {
-    displayText.textContent += "6";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "6";
+    }
   });
 }
 
 function number7() {
   const num = document.querySelector("#number-7");
   num.addEventListener("click", () => {
-    displayText.textContent += "7";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "7";
+    }
   });
 }
 
 function number8() {
   const num = document.querySelector("#number-8");
   num.addEventListener("click", () => {
-    displayText.textContent += "8";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "8";
+    }
   });
 }
 
 function number9() {
   const num = document.querySelector("#number-9");
   num.addEventListener("click", () => {
-    displayText.textContent += "9";
+    if (displayText.textContent.length == 10) {
+      return;
+    } else {
+      displayText.textContent += "9";
+    }
   });
 }
 
@@ -148,14 +188,24 @@ function calculate() {
   const calculate = document.querySelector("#equal-sign");
   calculate.addEventListener("click", () => {
     let numArray = displayText.textContent.split(/[*+-/]/);
+    let result = null;
+    if (numArray[1] == null) {
+      return;
+    }
     num1 = parseInt(numArray[0]);
     num2 = parseInt(numArray[1]);
 
-    operator = displayText.textContent.includes("+");
-    let result = operate("+", num1, num2);
+    if (displayText.textContent.includes("+")) {
+      operator = "+";
+    } else if (displayText.textContent.includes("-")) {
+      operator = "-";
+    } else if (displayText.textContent.includes("*")) {
+      operator = "*";
+    } else if (displayText.textContent.includes("/")) {
+      operator = "/";
+    }
+    result = operate(operator, num1, num2);
     displayText.textContent = result;
-
-    console.log(result);
   });
 }
 
