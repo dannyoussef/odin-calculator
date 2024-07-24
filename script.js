@@ -31,6 +31,13 @@ function operate(operator, num1, num2) {
   }
 }
 
+function del() {
+  const del = document.querySelector("#delete-sign");
+  del.addEventListener("click", () => {
+    displayText.textContent = displayText.textContent.slice(0, -1);
+  });
+}
+
 function clear() {
   const clear = document.querySelector("#clear");
   clear.addEventListener("click", () => {
@@ -215,6 +222,7 @@ function calculate() {
   });
 }
 
+del();
 calculate();
 clear();
 addBtn();
