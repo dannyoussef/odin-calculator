@@ -43,8 +43,6 @@ function number0() {
   const num = document.querySelector("#number-0");
   num.addEventListener("click", () => {
     displayText.textContent += "0";
-    displayText.textContent.substring(0, 10);
-    console.log("Clicked");
   });
 }
 
@@ -149,9 +147,15 @@ function multiplyBtn() {
 function calculate() {
   const calculate = document.querySelector("#equal-sign");
   calculate.addEventListener("click", () => {
-    let numArray = displayText.textContent.split("+");
-    num1 = numArray[0];
-    console.log(num1);
+    let numArray = displayText.textContent.split(/[*+-/]/);
+    num1 = parseInt(numArray[0]);
+    num2 = parseInt(numArray[1]);
+
+    operator = displayText.textContent.includes("+");
+    let result = operate("+", num1, num2);
+    displayText.textContent = result;
+
+    console.log(result);
   });
 }
 
